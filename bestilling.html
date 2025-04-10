@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bestill - Mobil Kafé</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Bestill Din Kaféopplevelse</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Hjem</a></li> <!-- Lenke tilbake til hovedsiden -->
+        <li><a href="#menu">Meny</a></li>
+        <li><a href="#order">Din Bestilling</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="menu">
+      <h2>Vår Meny</h2>
+      
+      <h3>Drikke</h3>
+      <ul id="drikke-list" class="menu-list"></ul>
+      
+      <h3>Bakverk</h3>
+      <ul id="bakverk-list" class="menu-list"></ul>
+      
+      <h3>Mat</h3>
+      <ul id="mat-list" class="menu-list"></ul>
+    </section>
+
+    <section id="order">
+      <h2>Din Bestilling</h2>
+      <ul id="order-list"></ul>
+      <form id="order-form">
+        <input type="text" id="name" placeholder="Ditt navn" required />
+        <input type="tel" id="phone" placeholder="Telefonnummer" required />
+        <button type="submit">Send Bestilling</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mobil Kafé</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
