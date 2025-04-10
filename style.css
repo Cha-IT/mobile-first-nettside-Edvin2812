@@ -1,0 +1,195 @@
+/* Mobil-først design */
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);  /* Mørkt gjennomsiktig lag */
+    z-index: -1;  /* Sender filteret bak innholdet */
+  }
+  
+  /* Headeren justering */
+  header {
+    background: rgba(0, 0, 0, 0.6);  /* Gjør headeren mørkere for å kontrastere med bakgrunnen */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 5px solid #4caf50;
+    z-index: 1;  /* Sørger for at headeren er over bakgrunnen */
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+  }
+  
+  main {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9); /* Lett bakgrunnsfarge for kontrast */
+    z-index: 1;
+  }
+  
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  #menu, #order, #contact {
+    padding: 2rem;
+    background: gray(255, 255, 255, 0.8); /* Gjør bakgrunnen mer gjennomsiktig for synlighet */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+.menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.menu-list li {
+  background: #fff;
+  padding: 10px;
+  width: 200px;
+  height: 300px;  /* Fast høyde for boksene */
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-list img {
+  width: 100%;
+  height: 150px;  /* Fast høyde for bildene */
+  object-fit: cover;  /* Sørger for at bildene dekker området uten å bli forvrengt */
+  border-radius: 10px;
+}
+  
+  button {
+    margin-top: 5px;
+    padding: 8px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #388e3c;
+  }
+  
+  #order-list li {
+    background: #f0f0f0;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  #map {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* Desktop-stil */
+  @media (min-width: 768px) {
+    #menu-list li {
+      width: 200px;
+    }
+  
+    nav ul {
+      gap: 20px;
+    }
+  
+    main {
+      padding: 2rem;
+    }
+  }
+  .menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .menu-list li {
+    flex: 1 1 30%;
+    max-width: 200px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  #history {
+    background-image: url('img/cafe2.webp');
+    background-size: cover; /* Sørger for at bildet fyller hele området uten å forvrenges */
+    background-position: center center; /* Holder bildet sentrert */
+    padding: 4rem;
+    color: black;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 0;
+    min-height: 400px;
+  }
+  
+  #history h2 {
+    font-size: 2rem; /* Juster fontstørrelsen på overskriften */
+    margin-bottom: 1rem; /* Mer plass mellom overskrift og tekst */
+  }
+  
+  #history p {
+    font-size: 1.2rem; /* Øk fontstørrelsen for bedre lesbarhet */
+    line-height: 1.6;
+  }
+  
+  #history-content {
+    max-width: 800px; /* Begrens tekstbredden for bedre lesbarhet */
+    margin-left: 20px;
+  }
+  
+  
